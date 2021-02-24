@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+        <li>Kijin Race 2.0</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <operations>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="KijinSmithy"]/comps/li[@Class = "CompProperties_Refuelable"]/fuelFilter/thingDefs</xpath>
+          <order>Prepend</order>
+          <value>
+            <li>Coal</li>
+            <li>Charcoal</li>
+          </value>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+</Patch>
